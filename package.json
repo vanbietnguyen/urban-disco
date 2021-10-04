@@ -4,9 +4,8 @@
   "description": "",
   "main": "server/app.js",
   "scripts": {
-    "start": "concurrently \"npm run dev:webpack\" \"npm run dev:express\"",
-    "dev:webpack": "NODE_ENV=development webpack serve --config ./webpack/webpack.dev.js",
-    "dev:express": "NODE_ENV=development PORT=3000 nodemon server/index.js",
+    "start": "concurrently \"npm run dev\"",
+    "dev": "NODE_ENV=development webpack serve --config ./webpack/webpack.dev.js",
     "test": "jest --detectOpenHandles",
     "build": "NODE_ENV=production webpack --config ./webpack/webpack.prod.js",
     "serve": "NODE_ENV=production PORT=3000 node server/index.js",
@@ -16,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
